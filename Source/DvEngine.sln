@@ -42,7 +42,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DbMerge", "Database\DbMerge
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Externals", "Externals", "{F24E81D7-2D1A-4CCC-9966-CD3068BAC833}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NktHookLib", "..\Externals\DeviareInProc\Src\vs2015\NktHookLib.vcxproj", "{7DE03078-DA93-4D66-8164-76277522D3F6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NktHookLib", "..\Externals\DeviareInProc\Src\vs2012\NktHookLib.vcxproj", "{7DE03078-DA93-4D66-8164-76277522D3F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

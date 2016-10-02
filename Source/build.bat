@@ -5,7 +5,7 @@ SET __Config=Release
 IF /I [%1] == [debug] (
     SET __Config=Debug
 )
-IF "%VS140COMNTOOLS%" == "" (
+IF "%VS110COMNTOOLS%" == "" (
     ECHO Visual Studio 2015 not found on this computer
     PAUSE
     GOTO end
@@ -13,8 +13,8 @@ IF "%VS140COMNTOOLS%" == "" (
 
 :do_process
 SETLOCAL
-CALL "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" x86
-IF "%VS140COMNTOOLS%" == "" (
+CALL "%VS110COMNTOOLS%\..\..\VC\vcvarsall.bat" x86
+IF "%VS110COMNTOOLS%" == "" (
     ENDLOCAL
     ECHO Cannot initialize Visual Studio x86 Command Prompt environment
     PAUSE
@@ -30,8 +30,8 @@ IF NOT %ERRORLEVEL% == 0 (
 ENDLOCAL
 
 SETLOCAL
-CALL "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" x64
-IF "%VS140COMNTOOLS%" == "" (
+CALL "%VS110COMNTOOLS%\..\..\VC\vcvarsall.bat" x64
+IF "%VS110COMNTOOLS%" == "" (
     ENDLOCAL
     ECHO Cannot initialize Visual Studio x64 Command Prompt environment
     PAUSE
