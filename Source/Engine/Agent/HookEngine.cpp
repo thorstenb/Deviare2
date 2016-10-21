@@ -1345,7 +1345,7 @@ static __inline VOID LoadRegisters(__out LPNKT_DV_ASMREGISTERS32 lpRegisters, __
   dwTemp = *((DWORD*)(nStackPointer+0x00));
   lpRegisters->sInternalUseOnly.dwAligment = dwTemp & 0x7FFFFFFFUL;
   lpRegisters->sInternalUseOnly.Original_St0 =
-    lpRegisters->sFloating.St0 = *((double*)(nStackPointer+0x04));
+    lpRegisters->sFloating.St0 = *((DWORDLONG*)(nStackPointer+0x04));
   nStackPointer += lpRegisters->sInternalUseOnly.dwAligment;
   lpRegisters->sInteger.Esp = nStackPointer+0x28;
   if (bPreCall == FALSE)
@@ -1374,7 +1374,7 @@ static __inline VOID SaveRegisters(__in LPNKT_DV_ASMREGISTERS32 lpRegisters, __i
 {
   if (lpRegisters->sInternalUseOnly.Original_St0 != lpRegisters->sFloating.St0)
   {
-    *((double*)(nStackPointer+0x04)) = lpRegisters->sFloating.St0;
+    *((DWORDLONG*)(nStackPointer+0x04)) = lpRegisters->sFloating.St0;
     *((DWORD*)(nStackPointer+0x00)) |= 0x80000000; //set st0 in-use flag
   }
   nStackPointer += lpRegisters->sInternalUseOnly.dwAligment;

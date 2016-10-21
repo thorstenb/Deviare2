@@ -188,7 +188,7 @@ public:
 typedef struct tagNKT_DV_ASMREGISTERS32 {
   struct {
     DWORD dwAligment;
-    double Original_St0;
+    DWORDLONG Original_St0;
   } sInternalUseOnly;
   struct tagInteger {
     __declspec(align(16)) DWORD Eax, Edx; //put Edx after Eax to make it compatible with EaxEdxPair
@@ -199,7 +199,7 @@ typedef struct tagNKT_DV_ASMREGISTERS32 {
     DWORD Eip;
   } sInteger;
   struct tagFloating {
-    __declspec(align(16)) double St0;
+    __declspec(align(16)) DWORDLONG St0;
   } sFloating;
 } NKT_DV_ASMREGISTERS32, *LPNKT_DV_ASMREGISTERS32;
 
