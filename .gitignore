@@ -5,6 +5,7 @@
 *.exp
 *.user
 *.sdf
+*.opensdf
 *.log
 *.obj
 *.ilk
